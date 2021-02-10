@@ -1,0 +1,31 @@
+$violet: hsl(235, 69%, 61%);
+$lightviolet: hsl(235, 82%, 77%);
+$verydarkblue: hsl(219, 29%, 14%);
+$midnight: hsl(220, 29%, 10%);
+$lightgrey: hsl(210, 22%, 96%);
+$grey: hsl(212, 23%, 69%);
+$darkgrey: hsl(214, 17%, 51%);
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $verydarkblue;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 14px;
+}
