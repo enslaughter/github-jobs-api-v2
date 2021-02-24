@@ -42,8 +42,8 @@ function App(){
         //console.log("Listing ID is " + listingid);
         //console.log("Listing ID type is " + typeof lisitngid);
             //let currentAPICall = `https://jobs.github.com/positions/${id}.json?markdown=true`;
-            let currentAPICall = "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json";
-            //let currentAPICall = `https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions/${String(listingid)}.json`;
+            //let currentAPICall = "https://jobs.github.com/positions.json";
+            let currentAPICall = `https://jobs.github.com/positions/${String(listingid)}.json`;
             //console.log("API calling; " + currentAPICall + " type is " + typeof currentAPICall);
             var callHeaders = new Headers({
                 "X-Requested-With": "XMLHttpRequest",
