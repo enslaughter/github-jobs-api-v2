@@ -1,11 +1,16 @@
 import ListingCard from "./components/ListingCard";
 
-function TestJobs(){
+import testListings from "./assets/testlistings.json";
+
+function TestJobs(props){
 
     return(
-        <div>
-            The jobs are BEING TESTED
-            <ListingCard />
+        <div className="job-listing-container">
+            {testListings.map((listingData, id) => {
+                return(
+                    <ListingCard listing={listingData} key={id} toggleState={props.toggleState} />
+                )
+            })}
         </div>
     )
 }

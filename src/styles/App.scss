@@ -6,12 +6,49 @@ $lightgrey: hsl(210, 22%, 96%);
 $grey: hsl(212, 23%, 69%);
 $darkgrey: hsl(214, 17%, 51%);
 
+//=======================//
+// MAIN SETTINGS SECTION //
+//=======================//
+
+// html {
+//   margin: 0;
+//   padding: 0;
+//   width: 100%;
+//   height: 100%;
+// }
+
+html {
+  height: 100%;
+}
+
 body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
   font-family: "Kumbh Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
   color: $verydarkblue;
+  background-color: $lightgrey;
+  margin: 0;
+  transition: 0.5s;
+  &[data-theme="dark"] {
+    background-color: $midnight;
+    color: white;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
 }
 
 h1 {
@@ -29,3 +66,202 @@ h3 {
 h4 {
   font-size: 14px;
 }
+
+//===
+// HEADER SECTION
+//===
+
+.heading-container {
+  background-image: url("../assets/mobile/bg-pattern-header.svg");
+  background-size: cover;
+  padding: 32px 24px 0;
+  margin-bottom: 72px;
+}
+
+.heading-top {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading-toggle-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#toggle-theme {
+  width: 48px;
+  height: 24px;
+  border: none;
+  border-radius: 12px;
+  background-color: white;
+  margin: 0 16px;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    border: 2px solid black;
+    outline: none;
+  }
+}
+
+.theme-setting-indicator {
+  width: 14px;
+  height: 14px;
+  background-color: $violet;
+  border-radius: 7px;
+  &:hover {
+    background-color: $lightviolet;
+  }
+}
+
+.theme-setting-indicator--night {
+  margin-left: auto;
+}
+
+.heading-filter-container {
+  padding: 16px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  position: relative;
+  transform: translateY(50%);
+
+  &[data-theme="dark"] {
+    background-color: $verydarkblue;
+  }
+
+  transition: 0.5s;
+}
+
+.search-form {
+  width: auto;
+}
+
+.search-input {
+  font-size: 16px;
+  font-family: inherit;
+  border: none;
+  background-color: transparent;
+  opacity: 65%;
+  &:focus {
+    outline: none;
+  }
+
+  &[data-theme="dark"] {
+    color: white;
+    opacity: 100%;
+    background-color: transparent;
+  }
+}
+
+#button-search-filter {
+  background-color: transparent;
+  border: none;
+  padding: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#button-search {
+  width: 48px;
+  height: 48px;
+  background-color: $violet;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  &:hover {
+    cursor: pointer;
+    background-color: $lightviolet;
+  }
+}
+
+//==
+//Card Section
+//==
+
+.job-listing-container {
+  padding: 25px 24px 0px;
+}
+
+.view-listing-container {
+  height: 100%;
+  background-color: $lightgrey;
+  &[data-theme="dark"] {
+    background-color: $midnight;
+  }
+  transition: 0.5s;
+}
+
+.listing {
+  background-color: white;
+  padding: 0px 24px 32px;
+  margin-bottom: 49px;
+  border-radius: 6px;
+  height: 228px;
+  color: $darkgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  div p {
+    display: inline-block;
+    text-decoration: none;
+    color: $verydarkblue;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 50px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 1s;
+  }
+
+  p:hover {
+    color: $darkgrey;
+    cursor: pointer;
+  }
+
+  p:focus {
+    outline: none;
+    text-decoration: underline;
+  }
+
+  p[data-theme="dark"] {
+    color: white;
+  }
+
+  p:hover[data-theme="dark"] {
+    color: $darkgrey;
+  }
+
+  &[data-theme="dark"] {
+    background-color: $verydarkblue;
+  }
+
+  transition: 0.5s;
+}
+
+.listing-logo {
+  width: auto;
+  height: 50px;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+  transform: translateY(-50%);
+}
+
+.listing-location {
+  color: $violet;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+//FULL LISTING VIEW SECTION

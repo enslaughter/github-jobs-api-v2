@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './styles/App.scss';
 
-function App() {
+function FetchJobs() {
   let currentAPICall = "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json";
 
   const[error, setError] = useState(null);
@@ -42,4 +42,4 @@ function App() {
  
 }
 
-export default App;
+export default FetchJobs;

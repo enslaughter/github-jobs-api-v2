@@ -1,13 +1,20 @@
 import './styles/App.scss';
-import Heading from "./components/Heading.jsx";
-import Footer from "./components/Footer.jsx";
-import TestJobs from "./components/TestJobs.js";
+import Heading from "./components/Heading";
+import Footer from "./components/Footer";
+import TestJobs from "./TestJobs";
 
-function HomePage(){
+import {useEffect} from 'react';
+
+function HomePage(props){
+
+    useEffect(() => {
+        props.changePageView('home');
+    })
+
     return(
         <div>
-            <Heading />
-            <TestJobs />
+            <Heading changeTheme={props.changeTheme} toggleState={props.toggleState} pageView={props.pageView}/>
+            <TestJobs toggleState={props.toggleState}/>
             <Footer />
         </div>
     )
